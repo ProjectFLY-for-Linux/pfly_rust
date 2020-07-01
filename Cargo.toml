@@ -4,9 +4,11 @@ description = "A crate to interact with the projectFly X-Plane IPC service."
 version = "0.1.0"
 authors = ["Skye Viau <skye.viau@outlook.com>"]
 license = "AGPL-V3"
+homepage = "https://gitlab.com/pretzelca/pfly_rust"
 repository = "https://gitlab.com/pretzelca/pfly_rust"
 keywords = ["projecfly", "flight-simulation", "xplane"]
 categories = ["api-bindings"]
+readme = "README.md"
 edition = "2018"
 
 [dependencies]
