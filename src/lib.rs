@@ -25,8 +25,9 @@ pub fn init() -> Socket {
     let pfly_socket = Socket::new(Domain::unix(), Type::stream(), None).unwrap();
     let pfly_socket_addr = &SockAddr::unix("/tmp/pf.sock").unwrap();
 
-    pfly_socket.bind(pfly_socket_addr);
-    pfly_socket.connect(pfly_socket_addr);
+    if pfly_socket.connect(pfly_socket_addr).is_err() {
+        panic!("Could not connect to projectFly socket!")
+    }
 
     return pfly_socket;
 }
