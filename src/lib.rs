@@ -98,9 +98,9 @@ pub struct PflyIpcData {
     pub fuel: i32,
     pub transponder: i32,
     pub bridgeType: u8,
-    pub isOnGround: u8,
-    pub isSlew: u8,
-    pub isPaused: u8,
+    pub isOnGround: bool,
+    pub isSlew: bool,
+    pub isPaused: bool,
     pub pitch: i32,
     pub roll: i32,
     pub time: i32, // This is calculated at projectFly
