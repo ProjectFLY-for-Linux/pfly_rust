@@ -60,9 +60,9 @@ pub fn init() -> Socket {
 ///     fuel: 20000,
 ///     transponder: 1425,
 ///     bridgeType: 3, // From projectFly: bridgeTypes = ['simconnect', 'fsuipc', 'if', 'xplane']
-///     isOnGround: 1,
-///     isSlew: 0,
-///     isPaused: 0,
+///     isOnGround: true,
+///     isSlew: false,
+///     isPaused: false,
 ///     pitch: 0,
 ///     roll: 0,
 ///     time: 0, // This is calculated by projectFly
@@ -106,12 +106,4 @@ pub struct PflyIpcData {
     pub time: i32, // This is calculated at projectFly
     pub fps: i32,
     pub aircraftType: &'static str, // This isn't applied on the projectFly side for some reason, still adding it just incase
-}
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
 }
